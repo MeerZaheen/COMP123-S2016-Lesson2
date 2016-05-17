@@ -50,5 +50,7 @@ namespace COMP123_s2016_Lesson2
             result =  firstNumber + secondNumber;
             return result;
         }
+
+        public static void addXtoY(ref int x, ref int Y)
     }
 }
