@@ -53,6 +53,12 @@
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\COMP123-s2016-Lesson2\COMP123-s2016-Lesson2.csproj">
+      <Project>{82284faa-33b0-44e3-a42e-1d03197afa33}</Project>
+      <Name>COMP123-s2016-Lesson2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
