@@ -21,5 +21,19 @@ namespace UnitTestForLesson2
             // Assert
             Assert.AreEqual(expectedResult, result);
         }
+        [TestMethod]
+        public void addYtoXTestMethod()
+        {
+            // Arrange
+            int x = 40;
+            int y = 50;
+            int expectedResult = 90;
+
+            // Act
+            int result = Program.addYtoX(ref x, ref y);
+
+            // Assert
+            Assert.AreEqual(expectedResult, result);
+        }
     }
 }
