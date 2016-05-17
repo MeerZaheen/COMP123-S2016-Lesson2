@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 * Date:May 17, 2016
 * Date Modified: May 17, 2016
 * Description: Advanced Method Demo Lesson 2
-* Version: 0.0.4 - Added addYtoX method and associated test
+* Version: 0.0.4 - Added addYtoX method and associated unit test
 */
 
 namespace COMP123_s2016_Lesson2
