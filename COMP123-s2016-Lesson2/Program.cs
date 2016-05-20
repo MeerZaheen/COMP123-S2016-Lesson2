@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 * Date:May 17, 2016
 * Date Modified: May 17, 2016
 * Description: Advanced Method Demo Lesson 2
-* Version: 0.0.5 - Added readUnitEnd- not completed
+* Version: 0.0.5 - added readUntilEndTestMethod and refactored codebase
 */
 
 namespace COMP123_s2016_Lesson2
@@ -32,6 +32,7 @@ namespace COMP123_s2016_Lesson2
             int x = 50;
             int y = 40;
             int result = 0;
+            int numberOfEntries;
 
             result = addXandY(x, y);
             Console.WriteLine(result);
@@ -42,7 +43,13 @@ namespace COMP123_s2016_Lesson2
 
             Console.WriteLine(x);
             Console.WriteLine();
-            Console.WriteLine(readUntilEnd());
+
+                Console.Write("How many entrues do you want to make? ");
+                int.TryParse(Console.ReadLine(), out numberOfEntries);
+                if (numberOfEntries > 0)
+                {
+                    readUntilEnd(numberOfEntries);
+                }
         }
         
         /** 
@@ -73,26 +80,24 @@ namespace COMP123_s2016_Lesson2
             return X;
         }
         
-        public static string[] readUntilEnd()
+        public static int readUntilEnd(int numberOfEntries)
         {
-            string[] inputs = new string[50];
+            // variable declaration
+            string[] inputs = new string[numberOfEntries];
             int inputCounter = 0;
 
+            // execution of code
             do
             {
                 Console.WriteLine("Enter a Value - ('end' to stop): ");
+                inputs[inputCounter] = "";
                 inputs[inputCounter] = Console.ReadLine();
-                if(inputs[inputCounter] == "end")
-                {
-                    inputCounter = -1;
-                }
-                else
-                {
-                    inputCounter++;
-                }
-            } while (inputCounter != -1);
+                // increment
+                inputCounter++;
+    
+            } while ((inputs[inputCounter-1] != "end") && (inputCounter < numberOfEntries));
 
-            return inputs;
+            return inputCounter;
         }
     }
 }
